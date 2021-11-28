@@ -13,7 +13,7 @@ public class Rocket {
 
     public void fly(int fuel) {
         int metersFlown = 0;
-        if(hasEnoughFuel(fuel)) {
+        if (hasEnoughFuel(fuel)) {
             metersFlown = calculateMetersFlown(fuel);
             decreaseFuel(fuel);
         }
@@ -29,9 +29,10 @@ public class Rocket {
     }
 
     public boolean hasEnoughFuel(int fuel) {
-        if(fuel < currentFuel) {
+        if (fuel <= currentFuel) {
             return true;
-        } return false;
+        }
+        return false;
     }
 
     @Override
